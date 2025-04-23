@@ -10,7 +10,7 @@
 <!-- ADD Open Graph Meta for title, description, image, url, type -->
 <meta property="og:title" content="Civic Lens" />
 <meta property="og:description" content="Civic Lens is an independent news organization committed to unbiased reporting, investigative journalism, and truth-driven storytelling."/>
-<meta property="og:image" content=""/>
+<meta property="og:image:alt" content="rushing water in grids at an outdoor facility."/>
 <meta property="og:url" content=""/>
 <meta property="og:type" content=""/>
 <!-- ADD link to stylesheet -->
@@ -18,8 +18,10 @@
   <title>Civic Lens</title>
 </head>
 <body>
+  <header>
 <!-- ADD semantic and validated HTML -->
 <!-- ADD skip to main content -->
+<a href="#main" id="skip">Skip to main content</a>
     <button id="theme-toggle" aria-label="Toggle light/dark mode">
       <svg width="35px" height="35px" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <defs><clipPath id="a"><path d="m18.512 18.512h62.977v62.977h-62.977z"/></clipPath></defs>
@@ -40,11 +42,12 @@
           <li><a href="#social">Social</a></li>
         </ul>
       </nav>
-      
+      </header>
+      <main id="main">
       <h2>Welcome to Civic Lens</h2>
         <p>We are an independent news organization dedicated to unbiased reporting, investigative journalism, and truth-driven storytelling. At Civic Lens, our mission is to expose the facts, amplify marginalized voices, and shine light on the systems that shape our society.</p>
         <blockquote class="tagline">“We don't follow the narrative. We follow the facts.”</blockquote>
-
+<section id="news">
       <h2>Breaking News</h2>
 
         <h3>Federal Investigation Launched into Water Mismanagement in the Southwest</h3>
@@ -60,74 +63,97 @@
         <video controls>
         <source src="videos/voter-suppression.mp4" type="video/mp4">
         </video>
-
+</section>
+<section id="featured">
       <h2>Featured Articles</h2>
-        
+
         <h3>The Cost of Silence: Whistleblower Stories from Inside Tech Giants</h3>
         <p>Former employees speak out about ethical breaches in data privacy and surveillance.</p>
-        
+
+
         <h3>Unequal Justice: How Bail Systems Harm the Poor</h3>
         <p>An investigative series on cash bail and its disproportionate impact.</p>
-        
+
         <h3>Invisible Work: The Lives of Migrant Caregivers</h3>
         <p>Humanizing the labor that keeps households and economies afloat.</p>
-        
+
         <h3>Redlined Still: A New Map of Modern-Day Housing Discrimination</h3>
         <p>Data visualization showing systemic inequality in real estate today.</p>
-        
+
         <h3>Climate Injustice: Who Pays for Pollution?</h3>
         <p>Communities of color bear the brunt of environmental damage.</p>
-        
+
         <h3>Teaching Under Fire: The Fight for Inclusive Education</h3>
         <p>Teachers navigate book bans, curriculum restrictions, and culture wars.</p>
-        
+
         <h3>Food Deserts and Corporate Abandonment</h3>
         <p>Why access to nutrition is a zip code lottery.</p>
-        
+
         <h3>Policing Mental Health: A Broken Response System</h3>
         <p>Examining police interactions with those in crisis.</p>
-        
+
         <h3>The Disinformation Economy</h3>
         <p>Tracing profit motives behind fake news empires.</p>
-        
+
         <h3>Facing the Algorithm: AI and Racial Bias</h3>
         <p>The coded inequalities that shape our lives.</p>
-        
+
         <h3>The Voting Maze</h3>
         <p>A guide to understanding your rights amid changing laws.</p>
-        
+
         <h3>After the Cameras Leave: Long-Term Crisis Recovery</h3>
         <p>Rebuilding trust and infrastructure in disaster-hit communities.</p>
-        
-        
+      </section> 
+      <section id="subscribe">
       <h2>Stay Informed. Stay Empowered.</h2>
         <p>Receive text messages with the news you want to know.</p>
+        <form action = "POST" method = "https://wp.zybooks.com/form-viewer.php">
+
+        <label for="Name">Name</label>
+        <input id="Name" type="text" required autocomplete>
         
-        Name
-        
-        Mobile
-        
-        Notification Preferences
-        
-        Breaking News
-        Politics
-        Weather
-        Sports
-        Entertainment
-        World
-        Financial
-        
-        Subscribe
-      
+  
+        <label for="mobile">Mobile</label>
+        <input id="mobile" type="tel"  required autocomplete>
+        <fieldset>
+       <legend> Notification Preferences</legend>
+
+       <input name="preferBreakingNews" type="checkbox" id="preferBreakingNews">        
+       <label for="preferBreakingNews">Breaking News</label>
+ 
+       <input name="preferPolitics" type="checkbox" id="preferPolitics">        
+       <label for="preferPolitics">Politics</label>
+
+       <input name="preferWeather" type="checkbox" id="preferWeather">    
+       <label for="preferWeather">Weather</label>
+
+       <input name="preferSports" type="checkbox" id="preferSports">    
+       <label for="preferSports">Sports</label>
+
+       <input name="preferEntertainment" type="checkbox" id="preferEntertainment">    
+       <label for="preferEntertainment">Entertainment</label>
+
+       <input name="preferWorld" type="checkbox" id="preferWorld">    
+       <label for="preferWorld">World</label>
+
+       <input name="preferFinancial" type="checkbox" id="preferFinancial">    
+       <label for="preferFinancial">Financial</label>
+        </fieldset>
+        <input value="Subscribe" type="submit">
+      </form>
+    </section>
+    </main>
+    <footer>
       <h2>Follow Us</h2>
-        Twitter/X
-        Instagram
-        YouTube
-        TikTok
-        LinkedIn
-        
-        &copy; 2025 Civic Lens. All rights reserved.
-        
+        <ul>
+        <li><a href="#twitter">Twitter/X</a></li>
+        <li><a href="instagram">Instagram</a></li>
+        <li><a href="youtube">YouTube</a></li>
+        <li><a href="tiktok">TikTok</a></li>
+        <li><a href="linkedin">LinkedIn</a></li>
+      </ul>
+        <small>&copy; 2025 Civic Lens. All rights reserved.</small>
+ 
         
   <script>
     const toggleButton = document.getElementById('theme-toggle');
@@ -149,5 +175,6 @@
       }
     });
   </script>
+      </footer>   
 </body>
 </html>
